@@ -164,11 +164,11 @@ The platform has special focus on Odisha:
 
 ---
 
-## 👨‍💻 Developer
-
-**Aurobinda Biswal**  
-MTech — Artificial Intelligence & Data Science  
-Final Year Project — 2024
+👨‍💻 Developer
+Aurobinda Biswal
+MTech — Artificial Intelligence & Data Science
+KIIT University, Bhubaneswar, Odisha
+Built as a personal AI project — 2026
 
 ---
 
