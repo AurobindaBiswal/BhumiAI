@@ -7,7 +7,7 @@ st.title("🤖 AI Land Intelligence Chatbot")
 st.write("Ask anything about land buying, selling, legal verification, investment, and more.")
 
 
-GROQ_API_KEY = "your_groq_api_key_here"
+GROQ_API_KEY = "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"
 
 
 SYSTEM_PROMPT = """You are an expert AI assistant specializing in Indian land and real estate intelligence. 
