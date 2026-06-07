@@ -9,7 +9,7 @@ st.title("🔍 RAG — Document Intelligence Q&A")
 st.write("Upload land documents and ask questions. AI will answer based on document content.")
 
 # --- PUT YOUR GROQ API KEY HERE ---
-GROQ_API_KEY = "gsk"
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 # ----------------------------------
 
 def extract_text_from_pdf(pdf_file):
