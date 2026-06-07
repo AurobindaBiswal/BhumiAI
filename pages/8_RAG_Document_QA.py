@@ -1,12 +1,14 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import PyPDF2
 import io
 from groq import Groq
 
 st.set_page_config(page_title="RAG Document Q&A", page_icon="🔍", layout="wide")
-
-st.title("🔍 RAG — Document Intelligence Q&A")
-st.write("Upload land documents and ask questions. AI will answer based on document content.")
+apply_theme()
+page_header("🔍", "RAG Document Q&A", "Upload land documents and ask questions. AI will answer based on document content.")
 
 # --- PUT YOUR GROQ API KEY HERE ---
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]

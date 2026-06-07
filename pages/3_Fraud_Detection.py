@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -6,9 +9,8 @@ from sklearn.preprocessing import StandardScaler
 import plotly.express as px
 
 st.set_page_config(page_title="Fraud Detection", page_icon="🚨", layout="wide")
-
-st.title("🚨 Land Transaction Fraud Detection")
-st.write("AI-powered anomaly detection to identify suspicious land transactions.")
+apply_theme()
+page_header("🚨", "Fraud Detection", "AI-powered anomaly detection to identify suspicious land transactions.")
 
 @st.cache_data
 def generate_transactions():

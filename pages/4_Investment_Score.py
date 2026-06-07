@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -5,9 +8,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 st.set_page_config(page_title="Investment Score", page_icon="📊", layout="wide")
-
-st.title("📊 Land Investment Score Analyzer")
-st.write("Get a comprehensive AI-powered investment score for any land parcel.")
+apply_theme()
+page_header("📊", "Investment Score Analyzer", "Get a comprehensive AI-powered investment score for any land parcel.")
 
 def calculate_investment_score(inputs):
     scores = {}

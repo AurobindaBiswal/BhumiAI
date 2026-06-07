@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
@@ -5,9 +8,8 @@ import pandas as pd
 import numpy as np
 
 st.set_page_config(page_title="Negotiation Strategy", page_icon="📊", layout="wide")
-
-st.title("📊 AI-Powered Land Negotiation Strategy")
-st.write("Get data-driven negotiation strategies to get the best deal on land purchases.")
+apply_theme()
+page_header("📊", "AI-Powered Negotiation Strategy", "Get data-driven negotiation strategies to get the best deal on land purchases.")
 
 def generate_negotiation_strategy(inputs):
     results = {}

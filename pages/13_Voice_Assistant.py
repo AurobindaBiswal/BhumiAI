@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import io
 import os
@@ -6,9 +9,9 @@ from gtts import gTTS
 import base64
 
 st.set_page_config(page_title="Voice Assistant", page_icon="🗣️", layout="wide")
+apply_theme()
 
-st.title("🗣️ BhumiAI Voice Assistant")
-st.write("Multilingual voice assistant for land queries — English, Hindi, and Odia supported.")
+page_header("🗣️", "BhumiAI Voice Assistant", "Multilingual voice assistant for land queries — English, Hindi, and Odia supported.")
 
 # --- PUT YOUR GROQ API KEY HERE ---
 try:

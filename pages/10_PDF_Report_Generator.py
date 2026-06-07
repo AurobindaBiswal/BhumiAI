@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -5,9 +8,9 @@ from datetime import datetime
 import io
 
 st.set_page_config(page_title="PDF Report Generator", page_icon="📋", layout="wide")
+apply_theme()
 
-st.title("📋 Land Intelligence Report Generator")
-st.write("Generate a comprehensive AI-powered land analysis report in PDF format.")
+page_header("📋", "Land Intelligence Report Generator", "Generate a comprehensive AI-powered land analysis report in PDF format.")
 
 def calculate_investment_score(inputs):
     location = min(100, (10 - inputs['distance_city']) * 8 + inputs['road_connectivity'] * 5 + inputs['water_availability'] * 4)

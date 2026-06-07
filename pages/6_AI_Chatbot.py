@@ -1,10 +1,12 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 from groq import Groq
 
 st.set_page_config(page_title="AI Land Chatbot", page_icon="🤖", layout="wide")
-
-st.title("🤖 AI Land Intelligence Chatbot")
-st.write("Ask anything about land buying, selling, legal verification, investment, and more.")
+apply_theme()
+page_header("🤖", "AI Land Intelligence Chatbot", "Ask anything about land buying, selling, legal verification, investment, and more.")
 
 
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]

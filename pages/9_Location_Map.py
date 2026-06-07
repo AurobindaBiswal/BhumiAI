@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -5,9 +8,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 st.set_page_config(page_title="Location Map Visualizer", page_icon="🗺️", layout="wide")
-
-st.title("🗺️ Land Location Intelligence Map")
-st.write("Visualize land prices, investment potential, and development zones across Odisha.")
+apply_theme()
+page_header("🗺️", "Land Location Intelligence Map", "Visualize land prices, investment potential, and development zones across Odisha.")
 
 # Odisha cities/areas data
 @st.cache_data

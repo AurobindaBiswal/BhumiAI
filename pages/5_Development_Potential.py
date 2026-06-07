@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -5,9 +8,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 st.set_page_config(page_title="Development Potential", page_icon="🏗️", layout="wide")
-
-st.title("🏗️ Land Development Potential Analyzer")
-st.write("Analyze the development potential of land parcels using AI and zoning intelligence.")
+apply_theme()
+page_header("🏗️", "Development Potential Analyzer", "Analyze the development potential of land parcels using AI and zoning intelligence.")
 
 def analyze_development_potential(inputs):
     results = {}

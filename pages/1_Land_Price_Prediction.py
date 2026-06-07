@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, metric_card, sec_head
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -8,9 +11,9 @@ import pickle
 import os
 
 st.set_page_config(page_title="Land Price Prediction", page_icon="🏠", layout="wide")
+apply_theme()
 
-st.title("🏠 Land Price Prediction")
-st.write("Predict land prices using Machine Learning based on various features.")
+page_header("🏠", "Land Price Prediction", "Predict land prices using Machine Learning based on various features.")
 
 # Generate synthetic Indian land data
 @st.cache_data

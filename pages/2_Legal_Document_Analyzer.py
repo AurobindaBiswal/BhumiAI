@@ -1,12 +1,15 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import PyPDF2
 import io
 import re
 
 st.set_page_config(page_title="Legal Document Analyzer", page_icon="📄", layout="wide")
+apply_theme()
 
-st.title("📄 Legal Document Analyzer")
-st.write("Upload land-related legal documents for AI-powered analysis and verification.")
+page_header("📄", "Legal Document Analyzer", "Upload land-related legal documents for AI-powered analysis and verification.")
 
 # Analysis functions
 def extract_text_from_pdf(pdf_file):

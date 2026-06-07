@@ -1,3 +1,6 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 import PyPDF2
 import io
@@ -5,9 +8,8 @@ import os
 from groq import Groq
 
 st.set_page_config(page_title="Advanced RAG", page_icon="🔍", layout="wide")
-
-st.title("🔍 Advanced RAG — Semantic Document Intelligence")
-st.write("Enterprise-grade RAG using Sentence Transformers + ChromaDB vector database.")
+apply_theme()
+page_header("🧠", "Advanced RAG — Semantic Document Intelligence", "Enterprise-grade RAG using Sentence Transformers + ChromaDB vector database.")
 
 # --- PUT YOUR GROQ API KEY HERE ---
 try:

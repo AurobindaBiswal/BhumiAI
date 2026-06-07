@@ -1,12 +1,15 @@
+import sys
+sys.path.append('.')
+from theme import apply_theme, page_header, sec_head
 import streamlit as st
 from groq import Groq
 import json
 import time
 
 st.set_page_config(page_title="Multi-Agent AI", page_icon="🤖", layout="wide")
+apply_theme()
 
-st.title("🤖 Multi-Agent AI Land Intelligence System")
-st.write("6 specialized AI agents collaborate to provide comprehensive land analysis.")
+page_header("🤝", "Multi-Agent AI Land Intelligence System", "6 specialized AI agents collaborate to provide comprehensive land analysis.")
 
 # --- PUT YOUR GROQ API KEY HERE ---
 try:
